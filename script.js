@@ -11,7 +11,7 @@ const submitBtn = document.querySelector('.submit-btn');
 document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
-    
+
     setTimeout(() => {
         cursorFollower.style.left = e.clientX + 'px';
         cursorFollower.style.top = e.clientY + 'px';
@@ -51,7 +51,7 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
-            
+
             // Animate skill bars
             if (entry.target.querySelector('.skill-progress')) {
                 setTimeout(() => {
@@ -69,7 +69,7 @@ sections.forEach(section => observer.observe(section));
 // Contact Form Handler
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+
     const formData = {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
@@ -85,11 +85,11 @@ contactForm.addEventListener('submit', async (e) => {
     setTimeout(() => {
         // Here you would send to EmailJS or your backend
         console.log('📧 Form Data:', formData);
-        
+
         // Success feedback
         submitBtn.textContent = 'Sent! 🎉';
         submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-        
+
         setTimeout(() => {
             submitBtn.textContent = 'Send Message';
             submitBtn.style.background = '';
@@ -115,14 +115,14 @@ document.querySelectorAll('.btn-primary, .hire-btn, .service-card').forEach(el =
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', () => {
         // Simulate project modal or link
-        alert('🔥 Full project coming soon!\n📧 Email: arsalanalihashmi7@gmail.com\n📞 Call: 03332110172');
+        alert("This project is available for review. Contact me for full details and live access.");
     });
 });
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('🚀 Portfolio Loaded Successfully!');
-    console.log('📧 Email: arsalanalihashmi7@gmail.com');
-    console.log('📞 Phone: 03332110172');
-    console.log('💼 Upwork/Fiverr ready!');
+    console.log('Portfolio Loaded Successfully!');
+    console.log('Email: arsalanalihashmi7@gmail.com');
+    console.log('Phone: 03332110172');
+    console.log('Upwork/Fiverr ready!');
 });
